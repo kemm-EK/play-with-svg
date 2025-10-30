@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG test</title>
+    <link rel="stylesheet" href="css/general.css" />
+  </head>
+  <body>
+    <h1>SVG'er i dokumentet</h1>
+
+    <section>
+      <article class="svg-container-embed">
+        <h2>SVG som embedded img</h2>
+        <img src="shapes.svg" alt="" />
+        <p>Vi kan placere en SVG i domumentet som en almindelige billedfil med &lt;img&gt; tagget. Fordelen er, at det er nemt og hurtigt, men vi mister muligheden for at manipulere SVG'en kode direkte med CSS.</p>
+      </article>
+
+      <article class="svg-container-file">
+        <h2>SVG kopieret ind i dokumentet som en kodet SVG fil</h2>
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238 242">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #f3c28e;
+              }
+
+              .cls-1,
+              .cls-2,
+              .cls-3 {
+                stroke: #010101;
+                stroke-miterlimit: 10;
+                stroke-width: 3px;
+              }
+
+              .cls-2 {
+                fill: #e6df87;
+              }
+
+              .cls-3 {
+                fill: #a3ba69;
+              }
+            </style>
+          </defs>
+          <g id="hotspot_orange">
+            <path class="cls-1" d="M33.84,45.26c-40.82-13.17-19.24,70.91-8.02,53.57s-1.05,36.72,48.26,10.49,34.77,5.18,49.31-26.23c19.14-41.35,20.4-34.73,3.77-40.35-36.78-12.43,38.2-22.6-7.96-29.94-46.17-7.34-44.54,45.63-85.36,32.46Z" />
+          </g>
+          <g id="hotspot_green">
+            <path
+              class="cls-3"
+              d="M107.71,110.88c-85.11,4.06-116.35-3.28,14.41,29.48,44.78,11.22,4.54,19.34,42.36,19.34,44.27,0,64.23-25.68,45.05-43.06s13.22-32.65-26.94-34.76c-37.27-1.95,156.05-43.6-48.66-10.87-47.54,7.6-109.12,4.2-45.12,16.79s93.65,13.28,64,12.59c-94.4-2.18-143.74-10.49-94.43,0s49.31,10.49,49.31,10.49Z"
+            />
+          </g>
+          <g id="hotspot_yellow">
+            <path class="cls-2" d="M128.66,178.45s1.05,2.78-5.66-17.35-22.95-6.1,2.86-22.57-13.84-38.43,25.81-16.47,29.28-17.69,39.65,27.45,62.83,35.99,3.05,51.24-53.85,52.8-59.78,15.25l-5.93-37.55Z" />
+          </g>
+        </svg>
+        <p>Her er SVG koden kopieret direkte ind i dokumentet. Fordelen ved denne metode er, at vi kan style og manipulere SVG'en direkte med CSS og JavaScript. Ulempen er, at det kan gøre HTML-filen større og mere kompleks.</p>
+      </article>
+
+      <article class="svg-container-hotspots-included">
+        <h2>SVG med 3 hotspots indlagt i koden</h2>
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238 242">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #f3c28e;
+              }
+
+              .cls-1,
+              .cls-2,
+              .cls-3 {
+                stroke: #010101;
+                stroke-miterlimit: 10;
+                stroke-width: 3px;
+              }
+
+              .cls-2 {
+                fill: #e6df87;
+              }
+
+              .cls-3 {
+                fill: #a3ba69;
+              }
+            </style>
+          </defs>
+          <g id="hotspot_orange">
+            <path class="cls-1" d="M33.84,45.26c-40.82-13.17-19.24,70.91-8.02,53.57s-1.05,36.72,48.26,10.49,34.77,5.18,49.31-26.23c19.14-41.35,20.4-34.73,3.77-40.35-36.78-12.43,38.2-22.6-7.96-29.94-46.17-7.34-44.54,45.63-85.36,32.46Z" />
+          </g>
+          <g id="hotspot_green">
+            <path
+              class="cls-3"
+              d="M107.71,110.88c-85.11,4.06-116.35-3.28,14.41,29.48,44.78,11.22,4.54,19.34,42.36,19.34,44.27,0,64.23-25.68,45.05-43.06s13.22-32.65-26.94-34.76c-37.27-1.95,156.05-43.6-48.66-10.87-47.54,7.6-109.12,4.2-45.12,16.79s93.65,13.28,64,12.59c-94.4-2.18-143.74-10.49-94.43,0s49.31,10.49,49.31,10.49Z"
+            />
+          </g>
+          <g id="hotspot_yellow">
+            <path class="cls-2" d="M128.66,178.45s1.05,2.78-5.66-17.35-22.95-6.1,2.86-22.57-13.84-38.43,25.81-16.47,29.28-17.69,39.65,27.45,62.83,35.99,3.05,51.24-53.85,52.8-59.78,15.25l-5.93-37.55Z" />
+          </g>
+          <circle id="circle-hotspot1" class="hotspot" cx="70" cy="80" r="15" />
+          <circle id="circle-hotspot2" class="hotspot" cx="150" cy="130" r="15" />
+          <circle id="circle-hotspot3" class="hotspot" cx="120" cy="200" r="15" />
+        </svg>
+        <p>Her er SVG koden med hotspots inkluderet. Fordelen ved denne metode er, at vi kan style og manipulere hotspots direkte med CSS og JavaScript. Ulempen er, at det kan gøre HTML-filen større og mere kompleks.</p>
+      </article>
+
+      <article class="svg-container-buttons">
+        <h2>SVG med JavaScript kontrollerede knapper</h2>
+        <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238 242">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #f3c28e;
+              }
+
+              .cls-1,
+              .cls-2,
+              .cls-3 {
+                stroke: #010101;
+                stroke-miterlimit: 10;
+                stroke-width: 3px;
+              }
+
+              .cls-2 {
+                fill: #e6df87;
+              }
+
+              .cls-3 {
+                fill: #a3ba69;
+              }
+            </style>
+          </defs>
+          <g id="hotspot_orange">
+            <path class="cls-1" d="M33.84,45.26c-40.82-13.17-19.24,70.91-8.02,53.57s-1.05,36.72,48.26,10.49,34.77,5.18,49.31-26.23c19.14-41.35,20.4-34.73,3.77-40.35-36.78-12.43,38.2-22.6-7.96-29.94-46.17-7.34-44.54,45.63-85.36,32.46Z" />
+          </g>
+          <g id="hotspot_green">
+            <path
+              class="cls-3"
+              d="M107.71,110.88c-85.11,4.06-116.35-3.28,14.41,29.48,44.78,11.22,4.54,19.34,42.36,19.34,44.27,0,64.23-25.68,45.05-43.06s13.22-32.65-26.94-34.76c-37.27-1.95,156.05-43.6-48.66-10.87-47.54,7.6-109.12,4.2-45.12,16.79s93.65,13.28,64,12.59c-94.4-2.18-143.74-10.49-94.43,0s49.31,10.49,49.31,10.49Z"
+            />
+          </g>
+          <g id="hotspot_yellow">
+            <path class="cls-2" d="M128.66,178.45s1.05,2.78-5.66-17.35-22.95-6.1,2.86-22.57-13.84-38.43,25.81-16.47,29.28-17.69,39.65,27.45,62.83,35.99,3.05,51.24-53.85,52.8-59.78,15.25l-5.93-37.55Z" />
+          </g>
+        </svg>
+        <button id="hotspotBtn1">Orange</button>
+        <button id="hotspotBtn2">Green</button>
+        <button id="hotspotBtn3">Yellow</button>
+        <p class="textarea"></p>
+        <p>Tryk på knapperne for at vise/skjule hotspots i SVG'en. Fordelen ved denne metode er, at vi kan bruge JavaScript til at kontrollere synligheden af hotspots uden at ændre selve SVG-koden og skærmlæsere bedre kan forstå indholdet.</p>
+      </article>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
